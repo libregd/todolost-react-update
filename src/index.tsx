@@ -1,15 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Rest from './Rest';
+import InputNew from "./InputNew"
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const inputBar = ReactDOM.createRoot(
+  document.getElementById('inputBar') as HTMLElement
+);
+const test = ReactDOM.createRoot(
+  document.getElementById('test') as HTMLElement
+);
+inputBar.render(
   <React.StrictMode>
-    <App />
+    <Rest />
+    
   </React.StrictMode>
 );
+test.render(
+  <React.StrictMode>
+    <InputNew />
+  </React.StrictMode>
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
